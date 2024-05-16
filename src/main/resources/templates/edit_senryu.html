@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>編集</h1>
+	<form method="post" action="/updateSenryu">
+		<input type="hidden" name="id" th:value="${senryu.id}"/> 
+		<textarea name="content" rows="3" cols="30" th:text="${senryu.content}"/>
+		<input type="submit" value="Save"/>
+	</form>
+</body>
+</html>

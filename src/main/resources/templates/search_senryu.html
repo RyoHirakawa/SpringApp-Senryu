@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+
+<body>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>川柳</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="senryu : ${senryuList}">
+				<td th:text="${senryu.id}">ID</td>
+				<td th:text="${senryu.content}">川柳内容</td>
+				<td>
+					<a th:href="@{'/editSenryu?id=' + ${senryu.id}}">編集</a>
+				</td>
+				<th>
+					<a th:href="@{'/deleteSenryu?id=' + ${senryu.id}}">削除</a>
+				</th>
+			</tr>
+		</tbody>
+	</table>
+	<a th:href="@{view}">一覧へ</a>
+</body>
+
+</html>

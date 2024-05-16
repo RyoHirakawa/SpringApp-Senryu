@@ -1,5 +1,5 @@
 /src/main/resources/
-に application.properties を追加し下記を書き込む
+に application.properties を作成し下記を書き込む
 ```
 spring.application.name=sample
 spring.datasource.url=jdbc:mysql://localhost:3306/{データベース名}
